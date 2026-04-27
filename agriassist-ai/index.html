@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriAssist AI - Smart Greenhouse Helpdesk</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="hero-panel" aria-labelledby="app-title">
+            <div class="hero-content">
+                <div class="brand-mark" aria-hidden="true">
+                    <span>AI</span>
+                </div>
+                <p class="eyebrow">Smart Greenhouse Helpdesk</p>
+                <h1 id="app-title">AgriAssist AI</h1>
+                <p class="intro">
+                    Ask practical questions about greenhouse monitoring, IoT sensors, irrigation,
+                    temperature, humidity, light, soil moisture, NPK sensors, and basic crop care.
+                </p>
+            </div>
+            <div class="hero-accent" aria-hidden="true">
+                <span>IoT sensors</span>
+                <span>Crop care</span>
+                <span>Watering advice</span>
+            </div>
+        </section>
+
+        <section class="chat-card" aria-label="AgriAssist AI chatbot">
+            <div class="chat-header">
+                <div>
+                    <h2>Smart Greenhouse Chat</h2>
+                </div>
+                <span class="status-pill" id="status-pill">Ready</span>
+            </div>
+
+            <div class="prompt-section">
+                <p class="section-label">Suggested prompts</p>
+                <div class="sample-grid" aria-label="Sample questions">
+                    <button class="sample-button" type="button" data-question="What does an NPK sensor measure?">
+                        What does an NPK sensor measure?
+                    </button>
+                    <button class="sample-button" type="button" data-question="My soil moisture is below 30%. What should I do?">
+                        My soil moisture is below 30%. What should I do?
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-box" id="chat-box" aria-live="polite">
+                <div class="message assistant-message">
+                    <div class="message-label">AgriAssist AI</div>
+                    <div class="message-content">
+                        <p>Hello! I can help explain smart greenhouse readings, sensor values, irrigation steps, and simple crop care ideas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="composer-panel">
+                <form class="chat-form" id="chat-form">
+                    <label class="sr-only" for="message-input">Ask AgriAssist AI a question</label>
+                    <textarea id="message-input" name="message" rows="2" placeholder="Ask about soil moisture, humidity, NPK sensors, irrigation..." required></textarea>
+                    <button id="send-button" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

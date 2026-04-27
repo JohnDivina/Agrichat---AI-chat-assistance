@@ -1,0 +1,4 @@
+config.php
+.env
+.vercel
+node_modules
