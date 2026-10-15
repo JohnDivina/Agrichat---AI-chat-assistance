@@ -33,7 +33,10 @@
                 <div>
                     <h2>Smart Greenhouse Chat</h2>
                 </div>
-                <span class="status-pill" id="status-pill">Ready</span>
+                <span class="status-pill" id="status-pill">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span class="status-text">Ready</span>
+                </span>
             </div>
 
             <div class="prompt-section">
@@ -45,7 +48,11 @@
                     <button class="sample-button" type="button" data-question="My soil moisture is below 30%. What should I do?">
                         My soil moisture is below 30%. What should I do?
                     </button>
+                    <button class="sample-button" type="button" data-question="How do I connect a DHT22 humidity sensor to an ESP32 for greenhouse monitoring?">
+                        How do I connect a DHT22 sensor to an ESP32 for greenhouse monitoring?
+                    </button>
                 </div>
+                <p class="scope-note">Note: Strictly scoped to agriculture, greenhouse operations, and agricultural IoT systems.</p>
             </div>
 
             <div class="chat-box" id="chat-box" aria-live="polite">

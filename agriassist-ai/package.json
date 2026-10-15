@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "npx --yes vercel dev"
+    "start": "npx --yes vercel dev",
+    "test": "node test_security_guardrails.mjs"
   }
 }

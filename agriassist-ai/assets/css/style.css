@@ -162,11 +162,11 @@ h1 {
 }
 
 .hero-accent span {
-    padding: 9px 12px;
-    border: 1px solid rgba(29, 143, 82, 0.16);
+    padding: 7px 13px;
+    border: 1px solid var(--line-strong);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.68);
-    color: #315b3b;
+    background: #ffffff;
+    color: #1b3824;
     font-size: 0.82rem;
     font-weight: 700;
 }
@@ -202,23 +202,50 @@ h1 {
     font-size: 0.96rem;
 }
 
+/* Anti-Slop: Solid grey bubble with subtle discrete state dot */
 .status-pill {
     flex: 0 0 auto;
-    min-width: 84px;
-    padding: 8px 14px;
-    border: 1px solid rgba(29, 143, 82, 0.16);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 14px;
+    border: 1px solid #d4d4d4;
     border-radius: 999px;
     text-align: center;
-    color: var(--green-dark);
-    background: var(--green-soft);
+    color: #171717;
+    background: #f5f5f5;
     font-size: 0.82rem;
-    font-weight: 800;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #171717;
+    flex-shrink: 0;
 }
 
 .status-pill.loading {
-    color: #77520e;
-    border-color: #f0d9a3;
-    background: #fff4d4;
+    color: #404040;
+    border-color: #d4d4d4;
+    background: #ebebeb;
+}
+
+.status-pill.loading .status-dot {
+    background: #737373;
+    animation: statusPulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes statusPulse {
+    from {
+        opacity: 0.35;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 .prompt-section {
@@ -268,6 +295,13 @@ h1 {
     box-shadow: 0 10px 24px rgba(20, 65, 36, 0.08);
     transform: translateY(-1px);
     outline: none;
+}
+
+.scope-note {
+    margin: 12px 0 0;
+    color: #637268;
+    font-size: 0.78rem;
+    line-height: 1.4;
 }
 
 .chat-box {

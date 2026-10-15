@@ -11,7 +11,12 @@ function setWaiting(waiting) {
     isWaiting = waiting;
     sendButton.disabled = waiting;
     messageInput.disabled = waiting;
-    statusPill.textContent = waiting ? 'Thinking' : 'Ready';
+    const statusText = statusPill.querySelector('.status-text');
+    if (statusText) {
+        statusText.textContent = waiting ? 'Thinking' : 'Ready';
+    } else {
+        statusPill.textContent = waiting ? 'Thinking' : 'Ready';
+    }
     statusPill.classList.toggle('loading', waiting);
 }
 
